@@ -30,13 +30,14 @@ class BlogTests(TestCase):
         self.assertEqual(f'{self.post.body}', 'Super great kind of testing')
 
     def test_post_list_view(self):
-        response = selfl.client.get(reverse('home'))
+        response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Great boy')
+        self.assertContains(response, 'Great body')
+        self.assertTemplateUsed(response, 'home.html')
 
     def test_post_details_views(self):
         response = self.client.get('/post/i/')
-        no_response = self.client.get('/post/180006/')
+        no_response = self.client.get('/post/100000/')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(no_response.status_code, 404)
         self.assertContains(response, 'A good title')
