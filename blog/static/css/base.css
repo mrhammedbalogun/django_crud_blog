@@ -49,3 +49,8 @@ header h1 a {
 .post-entry h2 a:hover {
     color: red;
 }
+
+.welcome-user{
+    font-size: 18px;
+    margin-right: 20px;
+}
