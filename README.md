@@ -1,5 +1,5 @@
 # django_crud_blog
-# This is a CRUD project creating a blog
+#This is a CRUD project creating a blog
 #ZURI Class
 
 
